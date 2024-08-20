@@ -1,0 +1,20 @@
+header {
+  padding: 0 1%;
+  /* width: 99%; */
+}
+header menu {
+  width: 40%;
+}
+
+header menu li {
+  margin: 0 1%;
+}
+header menu li:first-child {
+  background-color: var(--border-default);
+  padding: 0.5% 1%;
+  border-radius: 5px;
+}
+header menu li:last-child button {
+  color: #fff;
+  background-color: black;
+}

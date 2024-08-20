@@ -1,0 +1,31 @@
+.landingSection header {
+  min-height: 100vh;
+  min-width: auto;
+  background-color: grey;
+}
+.landingSection .buttonContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 15%;
+}
+.landingSection header .buttonContainer button:last-child {
+  color: #fff;
+  background-color: black;
+}
+.mini-featured img {
+  max-width: 32%;
+  flex: 1 1 0%;
+}
+.landingSection section {
+  text-align: start;
+  margin: 3%;
+}
+.landingSection section .subSection {
+  margin-left: 15px;
+}
+.landingSection .quoteContainer {
+  /* margin: 3%; */
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 2%;
+}

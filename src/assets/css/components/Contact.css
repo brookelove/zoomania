@@ -1,0 +1,7 @@
+.inputContainer label,
+.inputContainer input,
+.inputContainer textarea {
+  width: 25%;
+  text-align: start;
+  margin-bottom: 10px;
+}

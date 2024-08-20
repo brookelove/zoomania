@@ -1,50 +1,52 @@
-import { useState } from 'react';
-
-import { validateEmail } from '../utils/helpers';
+import { useState } from "react";
+import { validateEmail } from "../utils/helpers";
+import "../assets/css/components/Contact.css";
 
 function Contact() {
   const [formState, setFormState] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
 
-  const [errorMessage, setErrorMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState("");
   const { name, email, message } = formState;
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!errorMessage) {
-      console.log('Submit Form', formState);
+      console.log("Submit Form", formState);
     }
   };
 
   const handleChange = (e) => {
-    if (e.target.name === 'email') {
+    if (e.target.name === "email") {
       const isValid = validateEmail(e.target.value);
       if (!isValid) {
-        setErrorMessage('Your email is invalid.');
+        setErrorMessage("Your email is invalid.");
       } else {
-        setErrorMessage('');
+        setErrorMessage("");
       }
     } else {
       if (!e.target.value.length) {
         setErrorMessage(`${e.target.name} is required.`);
       } else {
-        setErrorMessage('');
+        setErrorMessage("");
       }
     }
     if (!errorMessage) {
       setFormState({ ...formState, [e.target.name]: e.target.value });
-      console.log('Handle Form', formState);
+      console.log("Handle Form", formState);
     }
   };
 
   return (
-    <section>
+    <main>
+      <h1>Questions?</h1>
+      <h3>Send A Message</h3>
       <form id="contact-form" onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name">Name:</label>
+        <div className="d-c-s-flex inputContainer">
+          <label htmlFor="name">Name</label>
           <input
             type="text"
             name="name"
@@ -52,8 +54,8 @@ function Contact() {
             onBlur={handleChange}
           />
         </div>
-        <div>
-          <label htmlFor="email">Email address:</label>
+        <div className="d-c-s-flex inputContainer">
+          <label htmlFor="email">Email address</label>
           <input
             type="email"
             name="email"
@@ -61,8 +63,8 @@ function Contact() {
             onBlur={handleChange}
           />
         </div>
-        <div>
-          <label htmlFor="message">Message:</label>
+        <div className="d-c-s-flex inputContainer">
+          <label htmlFor="message">Message</label>
           <textarea
             name="message"
             rows="5"
@@ -77,7 +79,7 @@ function Contact() {
         )}
         <button type="submit">Submit</button>
       </form>
-    </section>
+    </main>
   );
 }
 
