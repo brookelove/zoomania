@@ -1,7 +1,54 @@
+main {
+  /* background-color: var(--border-default); */
+  /* replace with a background arieal views of different biome video loop */
+  height: 100vh;
+  width: auto;
+}
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+form {
+  background-color: white;
+  width: 25%;
+  padding: 2% 0;
+  border-radius: 10px;
+}
+
 .inputContainer label,
 .inputContainer input,
 .inputContainer textarea {
-  width: 25%;
+  width: 80%;
   text-align: start;
   margin-bottom: 10px;
+}
+.inputContainer label {
+  font-weight: 500;
+}
+.inputContainer textarea,
+.inputContainer input {
+  color: var(--border-color);
+  padding-left: 10px;
+}
+.inputContainer input {
+  border-radius: 8px;
+  height: 30px;
+  border: 1px solid var(--border-default);
+}
+.inputContainer textarea {
+  border: 1px solid var(--border-default);
+  border-radius: 5px;
+}
+.submitBtn {
+  background-color: var(--secondary);
+  color: whitesmoke;
+  width: 85%;
+  padding: 2% 3%;
 }

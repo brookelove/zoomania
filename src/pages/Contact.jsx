@@ -1,16 +1,18 @@
 import { useState } from "react";
 import { validateEmail } from "../utils/helpers";
 import "../assets/css/components/Contact.css";
+import backgroundHero from "../assets/biomeBackground.mp4";
 
 function Contact() {
   const [formState, setFormState] = useState({
     name: "",
     email: "",
+    subject: "",
     message: "",
   });
 
   const [errorMessage, setErrorMessage] = useState("");
-  const { name, email, message } = formState;
+  const { name, email, subject, message } = formState;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -41,17 +43,24 @@ function Contact() {
   };
 
   return (
-    <main>
-      <h1>Questions?</h1>
-      <h3>Send A Message</h3>
+    <main className="d-c-c-flex">
+      <video id="background-video" autoPlay loop muted>
+        <source src={backgroundHero} type="video/mp4"></source>
+      </video>
       <form id="contact-form" onSubmit={handleSubmit}>
+        <hgroup>
+          <h1>Questions?</h1>
+          <h3>Send A Message</h3>
+        </hgroup>
         <div className="d-c-s-flex inputContainer">
           <label htmlFor="name">Name</label>
           <input
             type="text"
             name="name"
+            placeholder="Kyle"
             defaultValue={name}
             onBlur={handleChange}
+            className="border"
           />
         </div>
         <div className="d-c-s-flex inputContainer">
@@ -59,17 +68,32 @@ function Contact() {
           <input
             type="email"
             name="email"
+            placeholder="kylethelion@zoo.com"
             defaultValue={email}
             onBlur={handleChange}
+            className="border"
+          />
+        </div>
+        <div className="d-c-s-flex inputContainer">
+          <label htmlFor="subject">Subject</label>
+          <input
+            type="subject"
+            name="subject"
+            placeholder="Important!!!"
+            defaultValue={subject}
+            onBlur={handleChange}
+            className="border"
           />
         </div>
         <div className="d-c-s-flex inputContainer">
           <label htmlFor="message">Message</label>
           <textarea
-            name="message"
+            name="subject"
             rows="5"
-            defaultValue={message}
+            placeholder="I would like to be able to eat more."
+            defaultValue={subject}
             onBlur={handleChange}
+            className="border"
           />
         </div>
         {errorMessage && (
@@ -77,7 +101,9 @@ function Contact() {
             <p className="error-text">{errorMessage}</p>
           </div>
         )}
-        <button type="submit">Submit</button>
+        <button type="submit" className="submitBtn">
+          Submit
+        </button>
       </form>
     </main>
   );

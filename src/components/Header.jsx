@@ -2,7 +2,7 @@ import "../assets/css/components/Header.css";
 function Header() {
   return (
     //  need to create a function to check if they are authenticated which means logged in is true
-    <header className="d-b-flex">
+    <header className="d-b-flex box-shadow">
       {/* if they are not logged in */}
       <h4>Logo</h4>
       <menu className="d-e-flex">
