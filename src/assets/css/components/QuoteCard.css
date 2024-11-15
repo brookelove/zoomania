@@ -2,17 +2,21 @@
   padding: 5%;
   border-radius: 10px;
   text-align: start;
-  /* margin: 5%; */
   max-height: 200px;
   align-items: flex-start;
+  border: solid var(--primary-accent) 1px;
+  /* color: black; */
 }
 .quoteCard h4 {
   margin-top: 0;
+  color: var(--secondary);
 }
 .quoteCard section img {
   border-radius: 50%;
   width: 60px;
+  height: 60px;
 }
 .quoteCard section p {
   padding-left: 20px;
+  color: var(--tertiary);
 }

@@ -6,7 +6,7 @@ const Card = () => {
     <section className="card-container box-shadow">
       {/* takes over 60 percent of the height */}
       <img />
-      <hr></hr>
+      {/* <hr></hr> */}
       <section className="header">
         <h3 className="border">Name</h3>
         <p>Zoo</p>

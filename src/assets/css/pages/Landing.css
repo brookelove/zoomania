@@ -1,16 +1,27 @@
 .landingSection header {
   min-height: 100vh;
-  min-width: auto;
-  background-color: grey;
+  min-width: 100%;
+  background-color: var(--primary-accent);
+}
+.landingSection header h3 {
+  font-weight: 300;
+  font-size: 32px;
+  margin-bottom: 2%;
 }
 .landingSection .buttonContainer {
   display: flex;
   justify-content: space-around;
   width: 15%;
+  margin: 0;
+  background-color: inherit;
+}
+.landingSection header .buttonContainer button:first-child {
+  color: var(--primary);
+  background-color: var(--tertiary-accent);
 }
 .landingSection header .buttonContainer button:last-child {
-  color: #fff;
-  background-color: black;
+  color: var(--primary);
+  background-color: var(--secondary);
 }
 .mini-featured img {
   max-width: 32%;
@@ -21,10 +32,10 @@
   margin: 3%;
 }
 .landingSection section .subSection {
-  margin-left: 15px;
+  margin-left: 1%;
+  color: var(--secondary);
 }
 .landingSection .quoteContainer {
-  /* margin: 3%; */
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 2%;

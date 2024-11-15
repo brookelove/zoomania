@@ -8,10 +8,9 @@ function Landing() {
   return (
     <div className="landingSection">
       <header className="header d-c-c-flex">
-        {/* <h1>Featured Zoo's</h1> */}
         {/* using carousel and getting data passed through there potentially make a featured section of zoos that holds 5 articles about teh most recent news !*/}
-        <h2>Zoo Name</h2>
-        <h4>Current Total Animals</h4>
+        <h1>Zoo Name</h1>
+        <h3>Current Total Animals</h3>
         <section className="buttonContainer">
           <button>Map</button>
           <button>Sign In</button>
