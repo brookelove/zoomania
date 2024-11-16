@@ -3,7 +3,7 @@ import Card from "../components/Card";
 import Sidebar from "../components/Sidebar";
 const Home = () => {
   return (
-    <section>
+    <section className="home-container">
       <main>
         {/* will change nest to particulare biome that the person works in */}
         <h1>Your "Nest"</h1>
