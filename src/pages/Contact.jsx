@@ -43,67 +43,69 @@ function Contact() {
   };
 
   return (
-    <main className="d-c-c-flex">
+    <main className="d-c-c-flex contact-container">
       <video id="background-video" autoPlay loop muted>
         <source src={backgroundHero} type="video/mp4"></source>
       </video>
       <form id="contact-form" onSubmit={handleSubmit}>
         <hgroup>
-          <h1>Questions?</h1>
-          <h3>Send A Message</h3>
+          <h3>Questions</h3>
+          <h5>Send A Message</h5>
         </hgroup>
-        <div className="d-c-s-flex inputContainer">
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            name="name"
-            placeholder="Kyle"
-            defaultValue={name}
-            onBlur={handleChange}
-            className="border"
-          />
-        </div>
-        <div className="d-c-s-flex inputContainer">
-          <label htmlFor="email">Email address</label>
-          <input
-            type="email"
-            name="email"
-            placeholder="kylethelion@zoo.com"
-            defaultValue={email}
-            onBlur={handleChange}
-            className="border"
-          />
-        </div>
-        <div className="d-c-s-flex inputContainer">
-          <label htmlFor="subject">Subject</label>
-          <input
-            type="subject"
-            name="subject"
-            placeholder="Important!!!"
-            defaultValue={subject}
-            onBlur={handleChange}
-            className="border"
-          />
-        </div>
-        <div className="d-c-s-flex inputContainer">
-          <label htmlFor="message">Message</label>
-          <textarea
-            name="subject"
-            rows="5"
-            placeholder="I would like to be able to eat more."
-            defaultValue={subject}
-            onBlur={handleChange}
-            className="border"
-          />
-        </div>
-        {errorMessage && (
-          <div>
-            <p className="error-text">{errorMessage}</p>
+        <div className="form-container">
+          <div className="d-c-s-flex inputContainer">
+            <label htmlFor="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Kyle"
+              defaultValue={name}
+              onBlur={handleChange}
+              className="border"
+            />
           </div>
-        )}
-        <button type="submit" className="submitBtn">
-          Submit
-        </button>
+          <div className="d-c-s-flex inputContainer">
+            <label htmlFor="email">Email address</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="kylethelion@zoo.com"
+              defaultValue={email}
+              onBlur={handleChange}
+              className="border"
+            />
+          </div>
+          <div className="d-c-s-flex inputContainer">
+            <label htmlFor="subject">Subject</label>
+            <input
+              type="subject"
+              name="subject"
+              placeholder="Important!!!"
+              defaultValue={subject}
+              onBlur={handleChange}
+              className="border"
+            />
+          </div>
+          <div className="d-c-s-flex inputContainer">
+            <label htmlFor="message">Message</label>
+            <textarea
+              name="subject"
+              rows="5"
+              placeholder="I would like to be able to eat more."
+              defaultValue={subject}
+              onBlur={handleChange}
+              className="border"
+            />
+          </div>
+          {errorMessage && (
+            <div>
+              <p className="error-text">{errorMessage}</p>
+            </div>
+          )}
+          <button type="submit" className="submitBtn">
+            Submit
+          </button>
+        </div>
       </form>
     </main>
   );

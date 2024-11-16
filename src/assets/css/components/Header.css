@@ -4,6 +4,8 @@ header {
   background-color: var(--primary);
   color: var(--secondary);
   background-color: var(--secondary-accent);
+  z-index: 100;
+  position: relative;
 }
 header menu {
   width: 40%;
