@@ -3,7 +3,8 @@ header {
   /* z-index: 1; */
   background-color: var(--primary);
   color: var(--secondary);
-  background-color: var(--secondary-accent);
+  border-bottom: solid 1px var(--callout-button);
+  /* background-color: var(--secondary-accent); */
   z-index: 100;
   position: relative;
 }
@@ -25,5 +26,5 @@ header menu li:last-child button {
 }
 header menu .auth-btn {
   background-color: var(--primary-accent);
-  background-color: var(--tertiary-accent);
+  /* background-color: var(--tertiary-accent); */
 }

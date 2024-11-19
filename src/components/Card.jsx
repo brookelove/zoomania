@@ -1,12 +1,10 @@
 import "../assets/css/components/Card.css";
 import FavoriteCheckbox from "../assets/css/components/HeartCheck";
-import { useParams } from "react-router-dom";
 
-const Card = () => {
-  const { type } = useParams();
-  console.log(type);
+const Card = ({ cardSize }) => {
+  const cardClassName = cardSize === "sm" ? "sm-card-container" : "";
   return (
-    <section className="card-container box-shadow">
+    <section className={`card-container box-shadow ${cardClassName}`}>
       {/* takes over 60 percent of the height */}
       <img />
       <section className="header">
